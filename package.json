@@ -1,6 +1,6 @@
 {
   "name": "baresoil",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Create, develop, and deploy Baresoil applications.",
   "main": "lib/cli.js",
   "bin": "lib/cli.js",
