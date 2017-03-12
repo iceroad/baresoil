@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <title>Baresoil Basic</title>
+  </head>
+  <body>
+    <!-- Fixed top navigation row -->
+    <div class="top-nav animated fadeIn">
+      <h1>Baresoil Demo Chat</h1>
+    </div>
+
+    <!-- Since "top-nav" is fixed, top-nav-spacer will add an offset to the
+         top of the document so that scroll anchors work correctly. -->
+    <div class="top-nav-spacer"> </div>
+
+    <!-- The main container contains chat messages -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+          <div class="message-display" id="channel_messages"> </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fixed chat input box at the bottom of the screen, with a "Send"
+         button. Button clicks are listened for using jQuery in app.js -->
+    <div class="chat-input-spacer"> </div>
+    <div class="chat-input">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+            <!-- When connected, show the chat input controls -->
+            <div class="chat-input-controls">
+              <table class="table table-unstyled">
+                <tr>
+                  <td>
+                    <textarea class="form-control" id="chat-input-box"></textarea>
+                  </td>
+                  <td class='controls'>
+                    <button class="btn btn btn-primary" id="chat-send-button">Send</button>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <!-- Otherwise, show connection status -->
+            <div class="connection-status">Connecting...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Include BaresoilClient from the server to always use the latest version. -->
+    <script src="/__bs__/client/BaresoilClient.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
