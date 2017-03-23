@@ -1,6 +1,6 @@
 {
   "name": "baresoil",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Create, develop, and deploy Baresoil applications.",
   "main": "lib/cli.js",
   "bin": "lib/cli.js",
@@ -16,18 +16,19 @@
   "dependencies": {
     "async": "^2.1.5",
     "baresoil-client": "^0.2.2",
-    "baresoil-devenv": "^0.2.2",
+    "baresoil-devenv": "^0.2.3",
     "colors": "^1.1.2",
     "e164": "0.0.5",
-    "fs-extra": "^2.0.0",
+    "fs-extra": "^2.1.2",
     "inquirer": "^3.0.6",
     "json-stable-stringify": "^1.0.1",
     "lodash": "^4.17.4",
     "mime-types": "^2.1.14",
     "minimist": "^1.2.0",
+    "runtype": "^0.1.1",
     "strip-ansi": "^3.0.1",
     "validator": "^7.0.0",
     "walk": "^2.3.9",
-    "ws": "^2.2.0"
+    "ws": "^2.2.2"
   }
 }
