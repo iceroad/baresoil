@@ -6,10 +6,21 @@ body {
 }
 
 
+.view-setup h2 {
+  margin: 30px 0 30px 0;
+}
+
+.view-setup label {
+  line-height: 250%;
+}
+
+input[type="text"] {
+  border-radius: 8px;
+}
+
 .animated {
   animation-duration: 0.2s;
 }
-
 
 .top-nav {
   height: 60px;
@@ -23,7 +34,6 @@ body {
   line-height: 100%;
   z-index: 100;
 }
-
 
 .top-nav-spacer {
   height: 60px;      // must be the same height as top-nav
@@ -45,6 +55,7 @@ body {
   background-color: white;
   padding: 10px;
   margin: 5px 0 5px 0;
+  overflow: hidden;
 }
 
 
@@ -102,4 +113,10 @@ body {
 .chat-input .connection-status {
   text-align: center;
   padding: 40px 20px;
+}
+
+.chat-bubble .source .username {
+  font-size: 14px;
+  font-weight: 700;
+  color: #FF3E3E;
 }
