@@ -1,0 +1,47 @@
+{
+  "client": {
+    "path": "client/dist",
+    "cachePolicies": [
+      {
+        "name": "Cache versioned files indefinitely",
+        "match": "^__ver__",
+        "maxAge": 2592000
+      }
+    ],
+    "hooks": [
+      {
+        "type": "init",
+        "command": "npm install",
+        "workingDir": "client",
+        "name": "Install client dependencies"
+      },
+      {
+        "type": "init",
+        "command": "npm install --save-dev @iceroad/martinet",
+        "workingDir": "client",
+        "name": "Install build tool"
+      },
+      {
+        "type": "init",
+        "command": "npm install",
+        "workingDir": "server",
+        "name": "Install server dependencies"
+      },
+      {
+        "type": "dev-server",
+        "command": "./node_modules/.bin/martinet dev",
+        "workingDir": "client",
+        "name": "martinet dev"
+      },
+      {
+        "type": "build",
+        "command": "./node_modules/.bin/martinet build -c prod",
+        "workingDir": "client",
+        "name": "martinet build -c prod"
+      }
+    ]
+  },
+  "server": {
+    "path": "server"
+  }
+}

@@ -1,0 +1,4 @@
+server/node_modules
+client/node_modules
+baresoil_data
+.baresoil-deploy.json

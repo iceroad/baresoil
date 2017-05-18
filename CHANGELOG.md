@@ -1,3 +1,17 @@
+Version 0.2.7: May 18, 2017
+
+  * Changes to "init":
+    - Multiple built-in templates: "chat" and "martinet"
+    - Support for post-init hooks, for npm install, etc.
+
+  * Changes to "deploy":
+    - Support for selective HTTP caching policies for files in client project.
+
+  * General:
+    - Integration with martinet, a Webpack-based site build engine.
+    - Patches and syncs with Baresoil Cloud.
+
+
 Version 0.2.6: April 12, 2017
 
   * Changes to "dev":

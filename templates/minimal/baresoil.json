@@ -1,0 +1,8 @@
+{
+  "server": {
+    "path": "server"
+  },
+  "client": {
+    "path": "client"
+  }
+}

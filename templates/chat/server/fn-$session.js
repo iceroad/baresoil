@@ -1,25 +1,24 @@
-module.exports = function(sessionRequest, cb) {
-  var baseConnection = this.baseConnection;
-  var sendEventFn = this.sendEvent.bind(this);
-  var RealtimeBus = this.svclib.RealtimeBus;
-  var KVDataStore = this.svclib.KVDataStore;
+module.exports = function fnSession(sessionRequest, cb) {
+  const sendEventFn = this.sendEvent.bind(this);
+  const RealtimeBus = this.svclib.RealtimeBus;
+  const KVDataStore = this.svclib.KVDataStore;
   this.username = (sessionRequest || {}).username;
 
   //
   // Subscribe to realtime channel and bounce any received messages back
   // to the client as user events.
   //
-  var channelId = 'global-chat';
+  const channelId = 'global-chat';
 
-  RealtimeBus.on('message', function(channelMessage) {
+  RealtimeBus.on('message', (channelMessage) => {
     sendEventFn('channel_message', channelMessage);
   });
 
   RealtimeBus.listen([{
-    channelId: channelId,
-  }], function(err) {
+    channelId,
+  }], (err) => {
     if (err) {
-      console.error('Could not subscribe to realtime channel:', e);
+      console.error('Could not subscribe to realtime channel:', err);
     }
     return cb();
   });
@@ -29,7 +28,7 @@ module.exports = function(sessionRequest, cb) {
   //
   KVDataStore.get([{
     table: 'history',
-    key: 'global-chat-history'
+    key: 'global-chat-history',
   }], (err, items) => {
     if (err) {
       console.error(err);

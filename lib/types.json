@@ -1,0 +1,165 @@
+{
+  "BaresoilJson": {
+    "name": "BaresoilJson",
+    "type": "object",
+    "fields": {
+      "client": {
+        "type": "object",
+        "optional": true,
+        "fields": {
+          "path": {
+            "type": "string",
+            "optional": true
+          },
+          "hooks": {
+            "type": "array",
+            "optional": true,
+            "elementType": {
+              "type": "object",
+              "fields": {
+                "type": {
+                  "type": "factor",
+                  "factors": [
+                    "dev-server",
+                    "build",
+                    "init"
+                  ]
+                },
+                "command": {
+                  "type": "string"
+                },
+                "workingDir": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string",
+                  "optional": true
+                }
+              }
+            }
+          },
+          "cachePolicies": {
+            "type": "array",
+            "optional": true,
+            "elementType": {
+              "type": "object",
+              "fields": {
+                "name": {
+                  "type": "string",
+                  "optional": true
+                },
+                "match": {
+                  "type": "string"
+                },
+                "maxAge": {
+                  "type": "integer",
+                  "minValue": 1
+                }
+              }
+            }
+          }
+        }
+      },
+      "server": {
+        "type": "object",
+        "optional": true,
+        "fields": {
+          "path": {
+            "type": "string",
+            "optional": true
+          }
+        }
+      }
+    }
+  },
+  "BaseConnection": {
+    "name": "BaseConnection",
+    "type": "object",
+    "fields": {
+      "appId": {
+        "type": "integer",
+        "minValue": 1,
+        "maxValue": 9007199254740991
+      },
+      "clientId": {
+        "type": "hex_buffer",
+        "minLength": 10,
+        "maxLength": 80
+      },
+      "hostname": {
+        "type": "string",
+        "minLength": 6,
+        "maxLength": 64
+      },
+      "origin": {
+        "type": "string",
+        "optional": true
+      },
+      "remoteAddress": {
+        "type": "ip_address",
+        "minLength": 7,
+        "maxLength": 45
+      },
+      "connectedAt": {
+        "type": "epoch_timestamp_ms"
+      },
+      "protocol": {
+        "type": "factor",
+        "factors": [
+          "http",
+          "ws"
+        ]
+      }
+    }
+  },
+  "RpcRequest": {
+    "name": "RpcRequest",
+    "type": "object",
+    "fields": {
+      "requestId": {
+        "type": "integer"
+      },
+      "function": {
+        "type": "string",
+        "maxLength": 200
+      },
+      "arguments": {
+        "type": "any",
+        "maxSize": 26214400
+      }
+    }
+  },
+  "RpcResponse": {
+    "type": "object",
+    "name": "RpcResponse",
+    "fields": {
+      "requestId": {
+        "type": "integer"
+      },
+      "error": {
+        "type": "object",
+        "optional": true,
+        "maxSize": 16384
+      },
+      "result": {
+        "type": "any",
+        "maxSize": 26214400
+      }
+    }
+  },
+  "UserEvent": {
+    "name": "UserEvent",
+    "type": "object",
+    "fields": {
+      "name": {
+        "type": "string",
+        "maxLength": 64
+      },
+      "data": {
+        "type": "any",
+        "maxSize": 5242880,
+        "optional": true
+      }
+    }
+  }
+}
