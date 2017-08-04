@@ -2,7 +2,7 @@
 
 Create, develop, and deploy Baresoil applications.
 
-See documentation at [docs.baresoil.com](https://docs.baresoil.com/).
+See documentation at [baresoil.org](https://www.baresoil.org/).
 
 ## Summary
 
