@@ -19,7 +19,7 @@
         "type": "init",
         "command": "npm install --save-dev @iceroad/martinet",
         "workingDir": "client",
-        "name": "Install build tool"
+        "name": "Install Martinet"
       },
       {
         "type": "init",

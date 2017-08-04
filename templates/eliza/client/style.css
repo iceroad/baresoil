@@ -1,0 +1,34 @@
+.user-input-window {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  text-align: right;
+  background-color: white;
+}
+
+.user-input-window-spacer {
+  height: 150px;
+}
+
+.chat-message {
+  border: solid 1px #eee;
+  border-radius: 4px;
+  padding: 5px;
+  margin-bottom: 8px;
+}
+
+.from-user {
+  background-color: #ddd;
+  margin-left: 30px;
+}
+
+.from-ELIZA {
+  background-color: #F2F5AD;
+  margin-right: 30px;
+}
+
+.animated {
+  animation-duration: 0.1s;
+}

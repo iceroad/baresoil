@@ -1,3 +1,8 @@
+Version 1.0.0: Aug 4, 2017
+
+  * Breaking changes:
+    - Will only work with baresoil-server 1.0.0 and above.
+
 Version 0.2.7: May 18, 2017
 
   * Changes to "init":

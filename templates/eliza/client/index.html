@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Baresoil Demo | Eliza</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Chat transcript display -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-md-4 col-md-offset-4">
+          <h2>Eliza</h1>
+
+          <!-- Chat message transcript -->
+          <div id="chat_window">  </div>
+
+          <!-- Spacer for user input controls -->
+          <div class="user-input-window-spacer"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- User input textarea -->
+    <div class="user-input-window">
+      <div class="row">
+        <div class="col-xs-12 col-md-4 col-md-offset-4">
+        <div class="form-group">
+          <textarea class="form-control" id="chat_input" rows="3" cols="40" autofocus></textarea>
+        </div>
+        <button class="btn btn-xs btn-default" onclick="say()">Send</button>
+      </div>
+    </div>
+
+    <!-- Script includes -->
+    <script src="node_modules/baresoil-client/dist/BaresoilClient.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

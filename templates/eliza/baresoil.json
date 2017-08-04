@@ -1,0 +1,29 @@
+{
+  "server": {
+    "path": "server"
+  },
+  "client": {
+    "path": "client",
+    "cachePolicies": [
+      {
+        "name": "Cache node_modules",
+        "match": "node_modules",
+        "maxAge": 86400
+      }
+    ],
+    "hooks": [
+      {
+        "type": "init",
+        "command": "npm install",
+        "workingDir": "server",
+        "name": "Install server dependencies"
+      },
+      {
+        "type": "init",
+        "command": "npm install",
+        "workingDir": "client",
+        "name": "Install client dependencies"
+      }
+    ]
+  }
+}

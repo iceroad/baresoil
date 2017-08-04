@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(fonts/Roboto-Regular.ttf) format('truetype');
+}
+
+/* styles below are for mobile screens by default  */
+body {
+  background-color: white;
+  font-family: 'Roboto';
+}
+
+h1 {
+  font-size: 58px;
+}
+
+h2 {
+  font-size: 28px;
+  color: #577;
+}
+
+.container {
+  padding: 30px;
+  text-align: center;
+}
+
+/* desktop size overrides */
+@media only screen and (min-width : 992px) {
+  h1 {
+    font-size: 64px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .container {
+    padding-top: 20px;
+    padding-left: 25%;
+    padding-right: 25%;
+    text-align: left;
+  }
+}

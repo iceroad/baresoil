@@ -1,0 +1,15 @@
+{
+  "name": "baresoil-example-eliza",
+  "version": "0.1.0",
+  "description": "A simple realtime chatbot.",
+  "main": "index.js",
+  "dependencies": {
+    "elizabot": "0.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
