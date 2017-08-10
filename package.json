@@ -1,7 +1,7 @@
 {
   "name": "baresoil",
   "title": "Baresoil CLI",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Create, develop, and deploy Baresoil applications.",
   "main": "lib/cli.js",
   "bin": "lib/cli.js",
@@ -17,8 +17,8 @@
   "dependencies": {
     "async": "^2.5.0",
     "baresoil-client": "^1.0.0",
-    "baresoil-server": "^1.0.5",
-    "chalk": "^2.0.1",
+    "baresoil-server": "^1.0.6",
+    "chalk": "^2.1.0",
     "cli-table2": "^0.2.0",
     "colors": "^1.1.2",
     "e164": "0.0.5",
